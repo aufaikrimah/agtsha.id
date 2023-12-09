@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.dark {
+  background-color: #18181b;
+}
+
+.light {
+  background-color: #fff;
+}
