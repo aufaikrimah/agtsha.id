@@ -51,14 +51,56 @@ function App() {
     },
   ]
 
+  const products = [
+    {
+      title: 'Pashmina Credenza Silk',
+      photo: '',
+      price: 'Rp.45.000,-',
+    },
+    {
+      title: 'Pleated Skirt Summer',
+      photo: '',
+      price: 'Rp.75.000,-',
+    },
+    {
+      title: 'Pashmina Plisket',
+      photo: '',
+      price: 'Rp.35.000,-',
+    },
+    {
+      title: 'Alwa Scarf',
+      photo: '',
+      price: 'Rp.35.000,-',
+    },
+    {
+      title: 'Pashmina Ceruty',
+      photo: '',
+      price: 'Rp.40.000,-',
+    },
+    {
+      title: 'Voal Scarf',
+      photo: '',
+      price: 'Rp.40.000,-',
+    },
+  ]
+
   return (
     <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+
       <div className="flex flex-wrap">
         {buttonLink.map((button, index, isDarkMode) =>
           <ButtonLink key={index} buttonLink={button} isDarkMode={isDarkMode} />)}
       </div>
-      <Showcase></Showcase>
+
+      <div className='my-6'>
+        <h1 className='text-2xl font-bold mx-3 my-1'>Showcase</h1>
+        <div className='flex flex-wrap'>
+          {products.map((item, index) =>
+            <Showcase products={item} key={index} />)}
+        </div>
+      </div>
+
       <Footer></Footer>
 
 
