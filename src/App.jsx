@@ -12,11 +12,6 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  const mockProfile = {
-    nama: 'AGTSHA ID',
-    bio: 'Your Daily Hijab',
-  };
-
   const buttonLink = [
     {
       name: 'WhatsApp',
@@ -52,7 +47,7 @@ function App() {
 
   return (
     <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
-      <Header profile={mockProfile} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <div className="flex flex-wrap">
         {buttonLink.map((button, index) =>
           <ButtonLink key={index} buttonLink={button} />)}

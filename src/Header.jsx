@@ -17,8 +17,8 @@ function Header({ profile, isDarkMode, toggleDarkMode }) {
                     className={`absolute z-10 left-8 sm:left-4 w-18 h-18 rounded-full overflow-hidden mt-12 border-4 ${isDarkMode ? 'border-zinc-900' : 'border-white'}`}
                 />
                 <div className={`absolute ml-18 sm:ml-12 pl-10 z-10 mt-14 ${isDarkMode ? 'text-white' : 'text-zinc-900'}`}>
-                    <h1 className="text-2xl font-bold mt-6">{profile.nama}</h1>
-                    <p className="text-sm">{profile.bio}</p>
+                    <h1 className="text-2xl font-bold mt-6">AGTSHA ID</h1>
+                    <p className="text-sm">Your Daily Hijab</p>
                 </div>
             </div>
 
