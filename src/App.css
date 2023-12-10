@@ -10,8 +10,12 @@ body {
 
 .dark {
   background-color: #18181b;
+  color: #fff;
+  border-color: #fff;
 }
 
 .light {
   background-color: #fff;
+  color: #18181b;
+  border-color: #18181b;
 }

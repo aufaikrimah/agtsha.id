@@ -4,6 +4,12 @@ import Header from './Header';
 import ButtonLink from './ButtonLink';
 import Showcase from './Showcase';
 import Footer from './Footer';
+import whatsapp from './assets/img/whatsapp.svg'
+import shopee from './assets/img/shopee.png'
+import tokopedia from './assets/img/tokopedia.svg'
+import lazada from './assets/img/icon-lazada.png'
+import instagram from './assets/img/instagram.svg'
+import tiktok from './assets/img/tiktok.svg'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,32 +21,32 @@ function App() {
   const buttonLink = [
     {
       name: 'WhatsApp',
-      img: '',
+      img: whatsapp,
       url: '',
     },
     {
       name: 'Shopee',
-      img: '',
+      img: shopee,
       url: '',
     },
     {
       name: 'Tokopedia',
-      img: '',
+      img: tokopedia,
       url: '',
     },
     {
       name: 'Lazada',
-      img: '',
+      img: lazada,
       url: '',
     },
     {
       name: 'Instagram',
-      img: '',
+      img: instagram,
       url: '',
     },
     {
       name: 'Tiktok',
-      img: '',
+      img: tiktok,
       url: '',
     },
   ]
@@ -49,8 +55,8 @@ function App() {
     <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <div className="flex flex-wrap">
-        {buttonLink.map((button, index) =>
-          <ButtonLink key={index} buttonLink={button} />)}
+        {buttonLink.map((button, index, isDarkMode) =>
+          <ButtonLink key={index} buttonLink={button} isDarkMode={isDarkMode} />)}
       </div>
       <Showcase></Showcase>
       <Footer></Footer>
