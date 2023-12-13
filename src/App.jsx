@@ -144,7 +144,7 @@ function App() {
 
       <div className='flex flex-wrap my-6'>
 
-        <div className='w-2/3 md:w-full'>
+        <div className='w-2/3 md:w-full md:px-2'>
           <h1 className='text-2xl font-bold mx-3 my-1'>Showcase</h1>
           <div className='flex flex-wrap'>
             {products.map((item, index) =>
@@ -152,7 +152,7 @@ function App() {
           </div>
         </div>
 
-        <div className='w-1/3 md:w-full border-l border-rose-200 px-4'>
+        <div className='w-1/3 md:w-full border-l border-rose-200 md:border-none px-4'>
           <h1 className='text-2xl font-bold mx-3 my-3'>Testimoni</h1>
           {testimonialData.map((testimonial, index) => (
             <Testi key={index} testimonial={testimonial} />
