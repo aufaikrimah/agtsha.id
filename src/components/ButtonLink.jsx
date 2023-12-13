@@ -1,4 +1,4 @@
-function ButtonLink(props, isDarkMode) {
+function ButtonLink(props) {
     const { name, img, url } = props.buttonLink;
 
     return (
