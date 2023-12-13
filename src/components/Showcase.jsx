@@ -2,7 +2,7 @@ function Showcase(props) {
     const { title, photo, price } = props.products
 
     return (
-        <div className="w-24 sm:w-2/5 shadow-md shadow-rose-200 rounded-lg mx-2 my-3">
+        <div className="w-24 sm:w-2/5 shadow-md shadow-rose-200 rounded-lg mx-2 my-3 z-10">
             <div>
                 <img src={photo} alt={title} className="w-full h-auto mb-4 sm:mb-1 rounded-md" />
             </div>

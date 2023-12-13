@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import MovingIconsBackground from './components/AnimatedIcons';
+
 import Header from './components/Header';
 import ButtonLink from './components/ButtonLink';
 import Showcase from './components/Showcase';
@@ -135,6 +137,7 @@ function App() {
 
   return (
     <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
+      <MovingIconsBackground />
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
       <div className="flex flex-wrap">
@@ -144,7 +147,7 @@ function App() {
 
       <div className='flex flex-wrap my-6'>
 
-        <div className='w-2/3 md:w-full md:px-2'>
+        <div className='w-2/3 md:w-full md:px-2 z-10'>
           <h1 className='text-2xl font-bold mx-3 my-1'>Showcase</h1>
           <div className='flex flex-wrap'>
             {products.map((item, index) =>
@@ -152,7 +155,7 @@ function App() {
           </div>
         </div>
 
-        <div className='w-1/3 md:w-full border-l border-rose-200 md:border-none px-4'>
+        <div className='w-1/3 md:w-full border-l border-rose-200 md:border-none px-4 z-10'>
           <h1 className='text-2xl font-bold mx-3 my-3'>Testimoni</h1>
           {testimonialData.map((testimonial, index) => (
             <Testi key={index} testimonial={testimonial} />
